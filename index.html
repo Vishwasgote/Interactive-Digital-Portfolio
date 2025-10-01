@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Frontend Developer</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <!-- Floating nav -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="initials">YN</div>
+          <div class="name">Your Name</div>
+        </div>
+
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container main">
+      <!-- hero -->
+      <section id="hero" class="hero">
+        <div class="hero-left">
+          <h1>Hi, I’m <span class="accent">Your Name</span>.</h1>
+          <p class="lead">I build accessible, responsive user interfaces and small web apps with HTML, CSS, and JavaScript.</p>
+
+          <div class="actions">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn-outline" href="#contact">Contact</a>
+            <a class="ghost" href="https://github.com/vishwasgote" target="_blank" rel="noopener">Github</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="profile">
+            <img src="assets/profile.jpg" alt="Profile photo">
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section id="about" class="section card">
+        <h2>About</h2>
+        <p>Replace this with 2–3 short lines: what you do, your stack, and one accomplishment or focus. Example: “Frontend developer who loves performant UI, accessibility, and clean CSS. Built 10+ production sites and open-source tools.”</p>
+      </section>
+
+      <!-- projects -->
+      <section id="projects" class="section">
+        <h2>Selected projects</h2>
+
+        <div class="projects-grid">
+          <article class="project-card" data-project="p1">
+            <img src="assets/home_page.jpg" alt="Home_page">
+            <div class="project-body">
+              <h3>Project One</h3>
+              <p class="muted">A short line describing tech & purpose.</p>
+            </div>
+            <div class="project-foot">
+              <button class="view-btn">View</button>
+              <a class="link-muted" href="Home_page" target="_blank" rel="noopener">Live</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="p2">
+            <img src="assets/project2.jpg" alt="Project 2 screenshot">
+            <div class="project-body">
+              <h3>Project Two</h3>
+              <p class="muted">A short line describing tech & purpose.</p>
+            </div>
+            <div class="project-foot">
+              <button class="view-btn">View</button>
+              <a class="link-muted" href="#" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="p3">
+            <img src="assets/project3.jpg" alt="Project 3 screenshot">
+            <div class="project-body">
+              <h3>Project Three</h3>
+              <p class="muted">A short line describing tech & purpose.</p>
+            </div>
+            <div class="project-foot">
+              <button class="view-btn">View</button>
+              <a class="link-muted" href="#" target="_blank" rel="noopener">Live</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section id="contact" class="section card">
+        <h2>Contact</h2>
+        <p class="muted">I’m available for internships and freelance. Prefer email? <strong> vishwasgote02@gmail.com</strong></p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <input id="name" placeholder="Your name" required>
+          <input id="email" type="email" placeholder="Your email" required>
+          <textarea id="message" placeholder="Message" rows="5" required></textarea>
+          <div class="form-actions">
+            <button class="btn" type="submit">Send</button>
+            <button type="button" class="btn-outline" id="copyEmail">Copy email</button>
+          </div>
+          <p id="formInfo" class="muted small"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="muted">© <span id="year"></span> Vishwas Gote — Built with HTML/CSS/JS</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Project modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
